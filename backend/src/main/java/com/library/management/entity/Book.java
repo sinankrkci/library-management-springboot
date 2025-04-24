@@ -1,5 +1,6 @@
 package com.library.management.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,25 +15,32 @@ public class Book {
     @Column(name="id")
     private long id;
 
+    @JsonProperty("title")
     @Column(name="title")
     private String title;
 
+    @JsonProperty("author")
     @Column(name="author")
     private String author;
 
+    @JsonProperty("description")
     @Column(name="description")
     private String description;
 
+    @JsonProperty("copies")
     @Column(name="copies")
     private int copies;
 
+    @JsonProperty("copies_available")
     @Column(name="copies_available")
     private int copiesAvailable;
 
+    @JsonProperty("category")
     @Column(name="category")
     private String category;
 
-    @Column(name="img")
+    @JsonProperty("img")
+//    @Column(name="img")
     private String img;
 
 
