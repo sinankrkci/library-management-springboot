@@ -13,6 +13,7 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
+    @JsonProperty
     private long id;
 
     @JsonProperty("title")
