@@ -3,6 +3,8 @@ package com.library.management.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
@@ -10,6 +12,8 @@ import java.util.Date;
 @Entity
 @Table(name="review")
 @Data
+@Getter
+@Setter
 public class Review {
 
     @Id

@@ -3,11 +3,15 @@ package com.library.management.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 
 @Data
 @Table(name="book")
 @Entity
+@Getter
+@Setter
 public class Book {
 
     @Id
