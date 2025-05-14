@@ -19,7 +19,7 @@ public class ReviewService {
     private ReviewRepository reviewRepository;
 
     @Autowired
-    private ReviewService(ReviewRepository reviewRepository) {
+    public ReviewService(ReviewRepository reviewRepository) {
         this.reviewRepository = reviewRepository;
     }
 
