@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 @Transactional
@@ -51,5 +52,9 @@ public class ReviewService {
         } else {
             return false;
         }
+    }
+
+    public List<Review> findByBookId(Long bookId) {
+        return reviewRepository.findBybookId(bookId);
     }
 }

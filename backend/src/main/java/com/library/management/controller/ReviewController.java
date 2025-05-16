@@ -6,6 +6,8 @@ import com.library.management.service.ReviewService;
 import com.library.management.utils.ExtractJWT;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin("http://localhost:3000")
 @RestController
 @RequestMapping("/api/reviews")
@@ -37,5 +39,10 @@ public class ReviewController {
             throw new Exception("User email is missing");
         }
         reviewService.postReview(userEmail, reviewRequest);
+    }
+
+    @GetMapping("/search/findByBookId")
+    public List<Review> findByBookId(@RequestParam Long bookId) {
+        return reviewService.findByBookId(bookId);
     }
 }

@@ -85,7 +85,7 @@ export const BookCheckoutPage = () => {
 
             const responseJsonReviews = await responseReviews.json();
 
-            const responseData = responseJsonReviews._embedded.reviews;
+            const responseData = responseJsonReviews;
 
             const loadedReviews: ReviewModel[] = [];
 
